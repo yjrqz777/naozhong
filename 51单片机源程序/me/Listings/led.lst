@@ -1,0 +1,101 @@
+C51 COMPILER V9.54   LED                                                                   05/23/2023 15:52:11 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE LED
+OBJECT MODULE PLACED IN .\Objects\led.obj
+COMPILER INVOKED BY: F:\keil_c51\C51\BIN\C51.EXE led.c LARGE OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listing
+                    -s\led.lst) TABS(2) OBJECT(.\Objects\led.obj)
+
+line level    source
+
+   1          //#include "led.h"
+   2          //#include <reg51.h>
+   3          //sbit DIG1=P0^7;
+   4          //sbit DIG2=P1^0;
+   5          //sbit DIG3=P1^1;
+   6          //sbit DIG4=P3^6;
+   7          
+   8          //sbit x_led1=P2^7;
+   9          //sbit x_led2=P2^6;
+  10          //sbit x_led3=P2^5;
+  11          //sbit x_led4=P2^4;
+  12          //sbit x_led5=P2^3;
+  13          //sbit x_led6=P2^2;
+  14          //sbit x_led7=P2^1;
+  15          //sbit x_led8=P2^0;
+  16          
+  17          
+  18          //void delay(unsigned int ms) {
+  19          //    unsigned int i, j;
+  20          //    for (i = ms; i > 0; i--)
+  21          //        for (j = 110; j > 0; j--);
+  22          //}
+  23          //unsigned char code digitCode[] = {
+  24          //    0xC0,  // 0
+  25          //    0xF9,  // 1
+  26          //    0xA4,  // 2
+  27          //    0xB0,  // 3
+  28          //    0x99,  // 4
+  29          //    0x92,  // 5
+  30          //    0x82,  // 6
+  31          //    0xF8,  // 7
+  32          //    0x80,  // 8
+  33          //    0x90   // 9
+  34          //};
+  35          
+  36          //void display(unsigned char *digits) {
+  37          //    unsigned char i;
+  38          //    for (i = 0; i < 4; i++) {
+  39          //        switch (i) {
+  40          //            case 0:
+  41          //                DIG1 = 0;
+  42          //                break;
+  43          //            case 1:
+  44          //                DIG2 = 0;
+  45          //                break;
+  46          //            case 2:
+  47          //                DIG3 = 0;
+  48          //                break;
+  49          //            case 3:
+  50          //                DIG4 = 0;
+  51          //                break;
+  52          //        }
+  53          //        
+  54          //        P2 = digitCode[digits[i]];
+C51 COMPILER V9.54   LED                                                                   05/23/2023 15:52:11 PAGE 2   
+
+  55          //        delay(1);
+  56          //        P2 = 0x00;
+  57          //        
+  58          //        switch (i) {
+  59          //            case 0:
+  60          //                DIG1 = 1;
+  61          //                break;
+  62          //            case 1:
+  63          //                DIG2 = 1;
+  64          //                break;
+  65          //            case 2:
+  66          //                DIG3 = 1;
+  67          //                break;
+  68          //            case 3:
+  69          //                DIG4 = 1;
+  70          //                break;
+  71          //        }
+  72          //    }
+  73          //}
+  74          
+  75          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

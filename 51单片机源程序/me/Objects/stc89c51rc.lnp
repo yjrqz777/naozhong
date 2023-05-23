@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\led.obj" 
+TO ".\Objects\stc89c51rc" 
+PRINT(".\Listings\stc89c51rc.m51") RAMSIZE(256) 

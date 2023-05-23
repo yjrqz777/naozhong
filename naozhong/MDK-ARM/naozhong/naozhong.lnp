@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"naozhong\hx711.o"
+"naozhong\main.o"
+"naozhong\gpio.o"
+"naozhong\usart.o"
+"naozhong\stm32f1xx_it.o"
+"naozhong\stm32f1xx_hal_msp.o"
+"naozhong\stm32f1xx_hal_gpio_ex.o"
+"naozhong\stm32f1xx_hal_tim.o"
+"naozhong\stm32f1xx_hal_tim_ex.o"
+"naozhong\stm32f1xx_hal_uart.o"
+"naozhong\stm32f1xx_hal.o"
+"naozhong\stm32f1xx_hal_rcc.o"
+"naozhong\stm32f1xx_hal_rcc_ex.o"
+"naozhong\stm32f1xx_hal_gpio.o"
+"naozhong\stm32f1xx_hal_dma.o"
+"naozhong\stm32f1xx_hal_cortex.o"
+"naozhong\stm32f1xx_hal_pwr.o"
+"naozhong\stm32f1xx_hal_flash.o"
+"naozhong\stm32f1xx_hal_flash_ex.o"
+"naozhong\stm32f1xx_hal_exti.o"
+"naozhong\startup_stm32f103xe.o"
+"naozhong\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "naozhong\naozhong.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "./naozhong/\naozhong.map" -o naozhong\naozhong.axf

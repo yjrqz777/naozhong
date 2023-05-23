@@ -1,0 +1,225 @@
+C51 COMPILER V9.54   MAIN                                                                  05/23/2023 15:52:11 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: F:\keil_c51\C51\BIN\C51.EXE main.c LARGE OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listin
+                    -gs\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "main.h"
+   2          #include "led.h"
+   3          
+   4          
+   5          void delay(int n) {
+   6   1          int i=0, j=0;
+   7   1          for (i = n; i > 0; i--)
+   8   1        {
+   9   2              for (j = 110; j > 0; j--)
+  10   2          {}
+  11   2        }
+  12   1      }
+  13          void led()
+  14          {
+  15   1      //y_led1=1;
+  16   1      //y_led2=1;
+  17   1      //y_led3=1;
+  18   1      //y_led4=1;
+  19   1      //  
+  20   1      //          DIG1=1;
+  21   1      //          DIG2=1;
+  22   1      //          DIG3=1;
+  23   1      //          DIG4=1;
+  24   1        
+  25   1        
+  26   1                DIG1=0;
+  27   1                DIG2=0;
+  28   1                DIG3=0;
+  29   1                DIG4=0;
+  30   1      //y_led1=0;
+  31   1      //y_led2=0;
+  32   1      //y_led3=0;
+  33   1      //y_led4=0;
+  34   1        
+  35   1        
+  36   1      //x_led1=0;
+  37   1      //x_led2=0;
+  38   1      //x_led3=0;
+  39   1      //x_led4=0;
+  40   1      //x_led5=0;
+  41   1      //x_led6=0;
+  42   1      //x_led7=0;
+  43   1      //x_led8=0;
+  44   1      
+  45   1        
+  46   1      x_led1=1;
+  47   1      x_led2=1;
+  48   1      x_led3=1;
+  49   1      x_led4=1;
+  50   1      x_led5=1;
+  51   1      x_led6=1;
+  52   1      x_led7=1;
+  53   1      x_led8=1;
+  54   1      //clear();
+C51 COMPILER V9.54   MAIN                                                                  05/23/2023 15:52:11 PAGE 2   
+
+  55   1      }
+  56          unsigned int digitCode[] = {
+  57              ~0xC0,  // 0
+  58              ~0xF9,  // 1
+  59              ~0xA4,  // 2
+  60              ~0xB0,  // 3
+  61              ~0x99,  // 4
+  62              ~0x92,  // 5
+  63              ~0x82,  // 6
+  64              ~0xF8,  // 7
+  65              ~0x80,  // 8
+  66              ~0x90   // 9
+  67          };
+  68          
+  69          void display(unsigned int *digits) {
+*** WARNING C235 IN LINE 69 OF main.c: parameter 1: different types
+  70   1          unsigned int i=0;
+  71   1                    int x=0, j=0;
+  72   1          for (i = 0; i < 4; i++) {
+  73   2              switch (i) {
+  74   3                  case 0:
+  75   3                      DIG1 = 0;
+  76   3                      break;
+  77   3                  case 1:
+  78   3                      DIG2 = 0;
+  79   3                      break;
+  80   3                  case 2:
+  81   3                      DIG3 = 0;
+  82   3                      break;
+  83   3                  case 3:
+  84   3                      DIG4 = 0;
+  85   3                      break;
+  86   3              }
+  87   2              
+  88   2              P2 = digitCode[7];
+  89   2      
+  90   2      //        P2 = 0x00;
+  91   2              
+  92   2      //        switch (i) {
+  93   2      //            case 0:
+  94   2      //                DIG1 = 1;
+  95   2      //                break;
+  96   2      //            case 1:
+  97   2      //                DIG2 = 1;
+  98   2      //                break;
+  99   2      //            case 2:
+ 100   2      //                DIG3 = 1;
+ 101   2      //                break;
+ 102   2      //            case 3:
+ 103   2      //                DIG4 = 1;
+ 104   2      //                break;
+ 105   2      //        }
+ 106   2          }
+ 107   1      }
+*** WARNING C280 IN LINE 69 OF main.c: 'digits': unreferenced local variable
+ 108          
+ 109          //////////////////////
+ 110          void main() {
+ 111   1          unsigned int hour = 12;   // ?????,???0-23
+ 112   1          unsigned int minute = 34; // ?????,???0-59
+ 113   1          unsigned int digits[4];
+ 114   1        Init_Timer0();
+C51 COMPILER V9.54   MAIN                                                                  05/23/2023 15:52:11 PAGE 3   
+
+ 115   1      //        int i;
+ 116   1          while (1) {
+ 117   2      //          DIG1=0;
+ 118   2      //          DIG2=1;
+ 119   2      //          DIG3=1;
+ 120   2      //          DIG4=1;
+ 121   2      //        digits[0] = 1;
+ 122   2      //        digits[1] = 2;
+ 123   2      //        digits[2] = 3;
+ 124   2      //        digits[3] = 4;
+ 125   2      //        P2 = digitCode[7];
+ 126   2              // ?????????????
+ 127   2      //        display(digits);
+ 128   2              
+ 129   2              // ??1?
+ 130   2      //        delay(1000);
+ 131   2      //        
+ 132   2      //        // ????
+ 133   2      //        minute++;
+ 134   2      //        if (minute >= 60) {
+ 135   2      //            minute = 0;
+ 136   2      //            hour++;
+ 137   2      //            if (hour >= 24) {
+ 138   2      //                hour = 0;
+ 139   2      //            }
+ 140   2      //        }
+ 141   2            led();
+ 142   2      //P2 = digitCode[5];
+ 143   2      //    for (i = 0; i < 8; i++) {
+ 144   2      ////      P2=digitCode[i];
+ 145   2      //      delay(10);
+ 146   2      ////      P2=0x00;
+ 147   2      //    }
+ 148   2          }
+ 149   1      }
+*** WARNING C280 IN LINE 113 OF main.c: 'digits': unreferenced local variable
+ 150          
+ 151          /////////////////////////////////////////////////////
+ 152          void Init_Timer0()
+ 153          {
+ 154   1        TMOD = 0X01;      //T0, 工作模式1
+ 155   1      
+ 156   1        TH0 = (65536 - 25000)/256;
+ 157   1        TL0 = (65536 - 25000)%256;
+ 158   1      
+ 159   1        TR0 = 1;        //开启定时器
+ 160   1        ET0 = 1;        //开启定时器中断
+ 161   1        EA = 1;         //开启总中断    
+ 162   1      }
+ 163          
+ 164          //void int0() interrupt 1
+ 165          //{
+ 166          //  TH0 = (65536 - 25000)/256;
+ 167          //  TL0 = (65536 - 25000)%256;
+ 168          //  
+ 169          ////  flag++;
+ 170          ////  if(flag >= 20)
+ 171          ////  {
+ 172          ////    s++;flag=0;
+ 173          
+ 174          ////    
+ 175          ////  }
+C51 COMPILER V9.54   MAIN                                                                  05/23/2023 15:52:11 PAGE 4   
+
+ 176          ////  if(s==60){m++;s=0;}
+ 177          ////  if(m==60){h++;m=0;}
+ 178          ////  if(h==24){week++;h=0;}
+ 179          ////  if(week==7){week=0;}
+ 180          ////  if(clock==1)
+ 181          ////  {
+ 182          ////    if(m==m1&&h==h1)
+ 183          ////      {
+ 184          ////        beep=1;
+ 185          ////        clock=0;
+ 186          ////      }
+ 187          ////  }
+ 188          //  
+ 189          //  
+ 190          //}
+ 191          
+ 192          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    173    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =    292      19
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  3 WARNING(S),  0 ERROR(S)
